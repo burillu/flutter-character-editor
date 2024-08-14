@@ -1,3 +1,4 @@
+import 'package:character_editor/components/row_list.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -51,6 +52,7 @@ class HomePageState extends State<HomePage> {
   }
 }
 
-Widget body() => Column(
-      children: <Widget>[const Text("Testo 1"), Text("testo 2")],
+Widget body() => RowList(
+      counter: 4,
+      title: "Forza",
     );
