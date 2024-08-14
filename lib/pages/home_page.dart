@@ -33,26 +33,34 @@ class HomePageState extends State<HomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
-        backgroundColor: Theme.of(context).colorScheme.primary,
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: body(),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
+        appBar: AppBar(
+          // TRY THIS: Try changing the color here to a specific color (to
+          // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
+          // change color while the other colors stay the same.
+          backgroundColor: Colors.blue,
+          // Here we take the value from the MyHomePage object that was created by
+          // the App.build method, and use it to set our appbar title.
+          title: Text(widget.title),
+        ),
+        body:
+            body() // This trailing comma makes auto-formatting nicer for build methods.
+        );
   }
 }
 
-Widget body() => RowList(
-      counter: 4,
-      title: "Forza",
+Widget body() => Column(
+      children: [
+        RowList(
+          counter: 4,
+          title: "Agilita'",
+        ),
+        RowList(
+          counter: 17,
+          title: "Forza",
+        ),
+        RowList(
+          counter: 12,
+          title: "Potenza",
+        )
+      ],
     );
